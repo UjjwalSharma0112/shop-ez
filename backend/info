@@ -1,0 +1,1 @@
+User → places → Order → contains → OrderItem → references → Product

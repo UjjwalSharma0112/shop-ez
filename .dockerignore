@@ -1,0 +1,27 @@
+# Node modules (will be installed fresh in container)
+node_modules
+
+# Logs and temp files
+npm-debug.log
+yarn-error.log
+*.log
+tmp
+.cache
+
+# Build output (if built inside container)
+dist
+build
+coverage
+.next
+out
+
+# Git & Editor files
+.git
+.gitignore
+.vscode
+.idea
+.DS_Store
+
+# Env files (don’t bake secrets into images)
+.env
+.env.local
