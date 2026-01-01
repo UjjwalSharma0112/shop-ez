@@ -8,8 +8,9 @@
     "seed": "node prisma/seed.js"
   },
   "scripts": {
-    "start": "node server.js",
-    "seed": "npx prisma db seed"
+    "start": "node index.js",
+    "seed": "npx prisma db seed",
+    "simulate-sale": "node scripts/simulateSale.js"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +21,8 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "pg": "^8.16.3"
+    "pg": "^8.16.3",
+    "kafkajs": "^2.2.4"
   },
   "devDependencies": {
     "prisma": "^6.17.1"

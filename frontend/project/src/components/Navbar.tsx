@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { ShoppingCart, Store, User, LogOut } from 'lucide-react';
-import { useAuth } from '../contexts/AuthContext';
-import { useCart } from '../contexts/CartContext';
+import { Link } from "react-router-dom";
+import { ShoppingCart, Store, User, LogOut } from "lucide-react";
+import { useAuth } from "../contexts/AuthContext";
+import { useCart } from "../contexts/CartContext";
 
 export default function Navbar() {
   const { user, vendor, userType, logout } = useAuth();
@@ -24,7 +24,7 @@ export default function Navbar() {
               Products
             </Link>
 
-            {userType === 'user' && (
+            {userType === "user" && (
               <>
                 <Link
                   to="/orders"
@@ -46,7 +46,7 @@ export default function Navbar() {
               </>
             )}
 
-            {userType === 'vendor' && (
+            {userType === "vendor" && (
               <Link
                 to="/vendor/dashboard"
                 className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
@@ -59,7 +59,9 @@ export default function Navbar() {
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2 text-gray-700">
                   <User className="w-5 h-5" />
-                  <span className="font-medium">{user?.name || vendor?.name}</span>
+                  <span className="font-medium">
+                    {user?.name || vendor?.name}
+                  </span>
                 </div>
                 <button
                   onClick={logout}
@@ -71,12 +73,6 @@ export default function Navbar() {
               </div>
             ) : (
               <div className="flex items-center space-x-4">
-                <Link
-                  to="/login"
-                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
-                >
-                  Login
-                </Link>
                 <Link
                   to="/signup"
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"

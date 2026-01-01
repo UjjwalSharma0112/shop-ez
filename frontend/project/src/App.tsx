@@ -1,13 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AuthProvider } from './contexts/AuthContext';
-import { CartProvider } from './contexts/CartContext';
-import Navbar from './components/Navbar';
-import ProductList from './pages/ProductList';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Cart from './pages/Cart';
-import Orders from './pages/Orders';
-import VendorDashboard from './pages/VendorDashboard';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./contexts/AuthContext";
+import { CartProvider } from "./contexts/CartContext";
+import Navbar from "./components/Navbar";
+import ProductList from "./pages/ProductList";
+
+import Signup from "./pages/Signup";
+import Cart from "./pages/Cart";
+import Orders from "./pages/Orders";
+import VendorDashboard from "./pages/VendorDashboard";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<ProductList />} />
-              <Route path="/login" element={<Login />} />
+
               <Route path="/signup" element={<Signup />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/orders" element={<Orders />} />
